@@ -9,15 +9,15 @@ To make it work as a console program it was necessary to remove all the HTML tag
 
 Many other technical changes were necessary:
 
-A completely new main function
-All methods except main were changed to private static methods
-All global variables were changed to private static
+A completely new main function. 
+All methods except main were changed to private static methods. 
+All global variables were changed to private static. 
 etc.
 
 The code is very complex and difficult to understand.
 
-In an effort to tidy it up I created a C++ equivalent program. In this program the functions were restructured much more radically and many comments added to make it a bit easier to follow. Also, I discoverd that there were two completely different types of home-made bigintegers used, whch needed completely different functions to manipulate them. I replaced both types with GMP/MPIR extended precision functions, whch allowed me to simply remove a significant amount of code, and we can be confident that the extended-precision functions are well-documented and reliable. The division in particular was troublesome. It turned out that in some cases it is essential to use 'floor' division and in other cases 'truncation' division must be used.
+In an effort to tidy it up I created a C++ equivalent program. In this program the functions were restructured much more radically and many comments added to make it a bit easier to follow. Also, I discovered that there were two completely different types of home-made bigintegers used, whch needed completely different functions to manipulate them. I replaced both types with GMP/MPIR extended precision functions, whch allowed me to simply remove a significant amount of code, and we can be confident that the extended-precision functions are well-documented and reliable. The division in particular was troublesome. It turned out that in some cases it is essential to use 'floor' division and in other cases 'truncation' division must be used.
 
-I also grabbed Dario Alpert's web page describing his methods and converted it to word-processor document.
+I also grabbed Dario Alpert's web page describing his methods and converted it to a word-processor document.
 
 
